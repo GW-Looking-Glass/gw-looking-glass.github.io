@@ -7,13 +7,13 @@ TweenLite.from('#vr', 2, {
 TweenLite.from('#ar', 2, {
     opacity: 0,
     x: 20,
-    delay: 2,
+    delay: 1.5,
     ease: Power4.easeOut,
 });
 TweenLite.from('#mr', 2, {
     opacity: 0,
     x: 20,
-    delay: 3,
+    delay: 2,
     ease: Power4.easeOut,
 });
 TweenLite.from('#headset1', 2, {
