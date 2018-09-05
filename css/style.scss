@@ -1,5 +1,8 @@
 $information-tablet: "screen and (min-width : 768px)";
 $information-laptop: "screen and (min-width : 1200px)";
+$background1: #ff71ce;
+$background2: #d456a8;
+$color1: #05ffa1;
 
 * {
     margin: 0;
@@ -11,26 +14,69 @@ $information-laptop: "screen and (min-width : 1200px)";
 html, body{
     width: 100%;
     height: 100%;
-}
-
-h1{
-    font-size: 2rem;
-
-    @media #{$information-tablet} {
-        font-size: 3rem;
-    }
-    @media #{$information-laptop} {
-        font-size: 4rem;
-    }
+    background: linear-gradient($background1, $background2);;
 }
 
 .flex-container{
+    position: absolute;
+    z-index: 2;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     align-content: center;
     text-align: center;
+
+    #headset1{
+        width: 20rem;
+        margin-bottom: -2rem;
+
+        @media #{$information-tablet} {
+            width: 25rem;
+            margin-bottom: -1rem;
+        }
+        @media #{$information-laptop} {
+            width: 30rem;
+            margin-bottom: -1rem;
+        }
+    }
+
+    h1{
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-shadow: 0 0.1rem 2rem rgba(0, 0, 0, 0.1);
+        color: $color1;
+        margin-bottom: 1rem;
+        letter-spacing: 0.3rem;
+    
+        @media #{$information-tablet} {
+            font-size: 3rem;
+            margin-bottom: 1.4rem;
+        }
+        @media #{$information-laptop} {
+            font-size: 4rem;
+            margin-bottom: 1.8rem;
+        }
+    }
+
+    p{
+        color: white;
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+        margin: 0.2rem;
+
+        @media #{$information-tablet} {
+            font-size: 1.5rem;
+            margin: 0.3rem;
+            
+        }
+        @media #{$information-laptop} {
+            font-size: 1.8rem;
+            margin: 0.5rem;
+        }
+    }
 }
